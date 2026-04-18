@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohith Gowd Maridhu | Portfolio</title>
+    <meta name="description" content="Portfolio of Mohith Gowd Maridhu — Web Developer & UI Designer. 1st Year Engineering Student at Ramachandra College of Engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+    <!-- ========== INTRO SPLASH SCREEN ========== -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="loader-text" id="loader-mgm">MGM</h1>
+            <h1 class="loader-text" id="loader-full">
+                <span class="name-m">Mohith</span> 
+                <span class="name-g">Gowd</span> 
+                <span class="name-mm">Maridhu</span>
+            </h1>
+        </div>
+    </div>
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class='bx bx-info-circle'></i>
+        <span id="toast-msg">Message sent!</span>
+    </div>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>MGM<span class="logo-bracket">/&gt;</span>
+            </a>
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-cta">Hire Me</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <div class="hero-tag reveal">
+                <span class="dot"></span> Available for Opportunities
+            </div>
+            <h1 class="hero-title reveal">
+                Hi, I'm <br>
+                <span class="gradient-text">Mohith Gowd</span><br>
+                Maridhu
+            </h1>
+            <p class="hero-sub reveal">
+                <span class="typed-text"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-desc reveal">
+                1st Year Engineering student at Ramachandra College of Engineering — passionate about crafting digital experiences that blend clean code with beautiful design.
+            </p>
+            <div class="hero-actions reveal">
+                <a href="#projects" class="btn-primary">View Projects <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="#contact" class="btn-ghost">Say Hello</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-num">9.31</span>
+                    <span class="stat-label">CGPA</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">3+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">6+</span>
+                    <span class="stat-label">Skills</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right reveal">
+            <div class="profile-wrap">
+                <div class="profile-ring"></div>
+                <div class="profile-img-box">
+                    <img src="assets/profile.png" alt="Mohith Gowd Maridhu" id="profile-img">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class='bx bx-code-alt'></i> Web Dev
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class='bx bx-palette'></i> UI Design
+                </div>
+            </div>
+        </div>
+
+        <!-- Social sidebar -->
+        <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/mohithgowd-maridhu-1380763ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-link soc-1" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" class="social-link soc-2" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link soc-3" title="Gmail"><i class='bx bxl-gmail'></i></a>
+            <div class="social-line"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-wheel"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+        <div class="section-label reveal"><span>01</span> About Me</div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <h2 class="section-title">Building things<br>people <span class="gradient-text">love to use</span></h2>
+                <p>I'm currently pursuing my engineering degree at <strong>Ramachandra College of Engineering</strong>. I achieved a <strong>9.31 CGPA</strong> in my 1st Semester — proof that passion and performance go hand in hand.</p>
+                <p>My world revolves around the intersection of technology and creativity. I build real-world applications, design fluid interfaces, and love every second of the process. I believe great products come from a deep understanding of both code and human experience.</p>
+                <div class="about-chips">
+                    <span class="chip"><i class='bx bx-graduation-cap'></i> 1st Year Engineering</span>
+                    <span class="chip"><i class='bx bx-award'></i> 9.31 CGPA</span>
+                    <span class="chip"><i class='bx bx-bulb'></i> Quick Learner</span>
+                    <span class="chip"><i class='bx bx-heart'></i> Design Lover</span>
+                </div>
+            </div>
+            <div class="about-card-col reveal">
+                <div class="about-card ac-blue">
+                    <i class='bx bx-laptop'></i>
+                    <h4>Developer</h4>
+                    <p>Building scalable, responsive web apps with clean code and modern practices.</p>
+                </div>
+                <div class="about-card ac-purple">
+                    <i class='bx bx-brush'></i>
+                    <h4>Designer</h4>
+                    <p>Crafting interfaces with precision — every pixel, color, and type matters.</p>
+                </div>
+                <div class="about-card ac-cyan">
+                    <i class='bx bx-film'></i>
+                    <h4>Creative</h4>
+                    <p>Editing videos and visuals that communicate stories clearly and powerfully.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="skills" id="skills">
+        <div class="section-label reveal"><span>02</span> Skills</div>
+        <h2 class="section-title reveal">What I <span class="gradient-text">bring</span> to the table</h2>
+        <div class="skills-bento">
+            <div class="bento-card bento-large skill-card reveal">
+                <div class="skill-icon"><i class='bx bx-code-curly'></i></div>
+                <h3>Web Development</h3>
+                <p>Building responsive, modern, and interactive web applications with clean front-end architecture.</p>
+                <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+            <div class="bento-card skill-card reveal" style="--delay:.1s">
+                <div class="skill-icon"><i class='bx bx-palette'></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Pixel-perfect interfaces that just feel right.</p>
+            </div>
+            <div class="bento-card skill-card reveal" style="--delay:.2s">
+                <div class="skill-icon"><i class='bx bx-video'></i></div>
+                <h3>Video Editing</h3>
+                <p>Premium video production with fluid transitions.</p>
+            </div>
+            <div class="bento-card skill-card reveal" style="--delay:.3s">
+                <div class="skill-icon"><i class='bx bxs-image-alt'></i></div>
+                <h3>Photo Editing</h3>
+                <p>Professional-grade image enhancement and retouching.</p>
+            </div>
+            <div class="bento-card skill-card reveal" style="--delay:.4s">
+                <div class="skill-icon"><i class='bx bx-shape-square'></i></div>
+                <h3>Poster Design</h3>
+                <p>Eye-catching posters and event graphics.</p>
+            </div>
+            <div class="bento-card bento-wide skill-card reveal" style="--delay:.5s">
+                <div class="skill-icon"><i class='bx bxs-image'></i></div>
+                <h3>Thumbnail Editing</h3>
+                <p>High-CTR thumbnails designed to capture attention instantly across digital platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects" id="projects">
+        <div class="section-label reveal"><span>03</span> Projects</div>
+        <h2 class="section-title reveal">Things I've <span class="gradient-text">built</span></h2>
+        <div class="projects-list">
+
+            <div class="project-item reveal" onclick="window.open('https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_myschool-developedbyme-webdevelopment-ugcPost-7443152202409521152-upE7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M','_blank')" style="cursor:pointer">
+                <div class="project-number">01</div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>School App Development</h3>
+                        <a href="https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_myschool-developedbyme-webdevelopment-ugcPost-7443152202409521152-upE7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                    </div>
+                    <p>A purpose-built application tailored for school usage — covering administration, student interaction, and daily operations in one clean interface.</p>
+                    <div class="project-tech"><span>App Dev</span><span>UI Design</span><span>Admin Panel</span></div>
+                </div>
+                <div class="project-arrow"><i class='bx bx-right-arrow-alt'></i></div>
+            </div>
+
+            <div class="project-item reveal" style="--delay:.15s" onclick="window.open('https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_ai-promptengineering-innovation-ugcPost-7443626416950185984-NTUn?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M','_blank')" style="cursor:pointer;--delay:.15s">
+                <div class="project-number">02</div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>AI Prompter</h3>
+                        <a href="https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_ai-promptengineering-innovation-ugcPost-7443626416950185984-NTUn?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                    </div>
+                    <p>An AI-powered prompt engineering tool designed to help users craft precise, effective prompts — making AI interaction smarter, faster, and more impactful.</p>
+                    <div class="project-tech"><span>AI</span><span>Prompt Engineering</span><span>Innovation</span></div>
+                </div>
+                <div class="project-arrow"><i class='bx bx-right-arrow-alt'></i></div>
+            </div>
+
+            <div class="project-item reveal" style="--delay:.3s" onclick="window.open('https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_environmentaleducation-sustainability-climateaction-ugcPost-7442591768317014016-j9ph?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M','_blank')" style="cursor:pointer;--delay:.3s">
+                <div class="project-number">03</div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Eco Project</h3>
+                        <a href="https://www.linkedin.com/posts/mohithgowd-maridhu-1380763ba_environmentaleducation-sustainability-climateaction-ugcPost-7442591768317014016-j9ph?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGYrQDwBwmD4upbyLGYuqd6jTjCiJISDN3M" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                    </div>
+                    <p>A sustainability-focused project promoting environmental education and climate action — raising awareness through design, content, and impactful messaging.</p>
+                    <div class="project-tech"><span>Environmental Education</span><span>Sustainability</span><span>Climate Action</span></div>
+                </div>
+                <div class="project-arrow"><i class='bx bx-right-arrow-alt'></i></div>
+            </div>
+
+            <div class="project-item reveal" style="--delay:.45s" onclick="showToast('📩 Contact me for more details on this project!')" style="cursor:pointer;--delay:.45s">
+                <div class="project-number">04</div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Creative Design Portfolio</h3>
+                        <span class="project-link" style="cursor:pointer" onclick="event.stopPropagation();showToast('📩 Contact me for more details on this project!')"><i class='bx bx-message-square-dots'></i></span>
+                    </div>
+                    <p>A curated collection of thumbnail editing, vibrant poster designs, and polished video edits — showcasing a creative eye and strong visual storytelling.</p>
+                    <div class="project-tech"><span>Photoshop</span><span>Video Editing</span><span>Poster Design</span></div>
+                </div>
+                <div class="project-arrow"><i class='bx bx-right-arrow-alt'></i></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+        <div class="section-label reveal"><span>04</span> Contact</div>
+        <div class="contact-grid">
+            <div class="contact-left reveal">
+                <h2 class="section-title">Let's build something <span class="gradient-text">great</span> together</h2>
+                <p>Have a project, idea, or just want to connect? My inbox is always open. Let's create something amazing.</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-primary contact-cta">
+                    <i class='bx bx-send'></i> Send me an Email
+                </a>
+                <div class="contact-links">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-detail">
+                        <i class='bx bx-envelope'></i>
+                        <span>maridhu4@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohithgowd-maridhu-1380763ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-detail">
+                        <i class='bx bxl-linkedin'></i>
+                        <span>linkedin.com/in/mohithgowd</span>
+                    </a>
+                    <div class="contact-detail">
+                        <i class='bx bx-map-pin'></i>
+                        <span>Ramachandra College of Engineering</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrap reveal">
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/maridhu4@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Portfolio Message!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Mohith Gowd" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Let's talk about..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">
+                        Send Message <i class='bx bx-paper-plane'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="logo"><span class="logo-bracket">&lt;</span>MGM<span class="logo-bracket">/&gt;</span></span>
+            <p>© 2026 Mohith Gowd Maridhu — All Rights Reserved</p>
+            <a href="#home" class="back-top"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <canvas id="particles-canvas"></canvas>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
