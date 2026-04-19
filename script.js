@@ -58,9 +58,10 @@ hamburger.addEventListener('click', () => {
     }
 });
 
-navbar.querySelectorAll('.nav-link, .nav-cta, .contact-detail, .btn-primary, .btn-ghost, .social-link').forEach(link => {
+// Listen for clicks on all potential links/buttons for mobile menu and email handling
+document.querySelectorAll('.nav-link, .nav-cta, .contact-detail, .btn-primary, .btn-ghost, .social-link').forEach(link => {
     link.addEventListener('click', (e) => {
-        // Close menu if it's a mobile nav link
+        // Close menu if it's a mobile nav link or CTA
         if (link.classList.contains('nav-link') || link.classList.contains('nav-cta')) {
             navbar.classList.remove('open');
             hamburger.querySelectorAll('span').forEach(b => {
@@ -68,7 +69,8 @@ navbar.querySelectorAll('.nav-link, .nav-cta, .contact-detail, .btn-primary, .bt
             });
         }
 
-        // Handle Email Redirects responsively
+        // Handle Email Redirects responsively (for direct links like Hire Me)
+        // Check if it's a direct Gmail link (not the contact form submit button)
         if (link.href && link.href.includes('mail.google.com/mail') && window.innerWidth < 768) {
             e.preventDefault();
             window.location.href = 'mailto:maridhu4@gmail.com';
