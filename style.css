@@ -57,7 +57,7 @@ body.loading {
 .loader-text {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(1.8rem, 8vw, 5rem);
     margin: 0;
     transition: all 0.6s ease;
 }
@@ -75,12 +75,22 @@ body.loading {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
-    white-space: nowrap;
     opacity: 0;
     letter-spacing: 0.1em;
     filter: blur(10px);
     display: flex;
-    gap: 0.8rem;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #loader-full {
+        flex-direction: column;
+        gap: 0;
+        letter-spacing: 0.02em;
+        white-space: normal;
+        text-align: center;
+    }
 }
 
 .name-m  { color: var(--orange); }
@@ -1056,4 +1066,36 @@ select:focus-visible {
     .skills-bento { grid-template-columns: 1fr; }
     .bento-large, .bento-wide { grid-column: span 1; }
     .about-card { flex: 1 1 100%; }
+
+    /* New Fixes for Mobile Only */
+    .hero-title { font-size: clamp(1.8rem, 8vw, 2.6rem); line-height: 1.2; }
+    .hero-title span { display: block; margin-top: 0.2rem; }
+    .profile-wrap { width: 250px; height: 250px; }
+    .hero { padding-top: 5rem; padding-bottom: 3rem; }
+    .stat-num { font-size: 1.6rem; }
+    .hero-stats { gap: 1rem; }
+    
+    .section-title { font-size: 2.2rem; }
+    .btn-primary, .btn-ghost { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+}
+
+/* Fix for very narrow devices (e.g. iPhone SE) */
+@media (max-width: 360px) {
+    .profile-wrap { width: 200px; height: 200px; }
+    .badge-1 { left: -10px; }
+    .badge-2 { right: -10px; }
+    .hero-title { font-size: 1.8rem; }
+}
+
+/* Ensure no horizontal scroll on mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Better tap targets for mobile */
+.nav-link, .nav-cta, .btn-primary, .btn-ghost, .social-link, .project-link {
+    min-height: 44px; /* Standard accessible touch target size */
+    display: inline-flex;
+    align-items: center;
 }

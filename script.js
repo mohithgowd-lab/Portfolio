@@ -58,12 +58,21 @@ hamburger.addEventListener('click', () => {
     }
 });
 
-navbar.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
-    link.addEventListener('click', () => {
-        navbar.classList.remove('open');
-        hamburger.querySelectorAll('span').forEach(b => {
-            b.style.transform = ''; b.style.opacity = '';
-        });
+navbar.querySelectorAll('.nav-link, .nav-cta, .contact-detail, .btn-primary, .btn-ghost, .social-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Close menu if it's a mobile nav link
+        if (link.classList.contains('nav-link') || link.classList.contains('nav-cta')) {
+            navbar.classList.remove('open');
+            hamburger.querySelectorAll('span').forEach(b => {
+                b.style.transform = ''; b.style.opacity = '';
+            });
+        }
+
+        // Handle Email Redirects responsively
+        if (link.href && link.href.includes('mail.google.com/mail') && window.innerWidth < 768) {
+            e.preventDefault();
+            window.location.href = 'mailto:maridhu4@gmail.com';
+        }
     });
 });
 
@@ -119,15 +128,21 @@ document.getElementById('contact-form').addEventListener('submit', e => {
         `Hi Mohith,\n\nYou received a message from your portfolio website:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n— Sent via Portfolio Contact Form`
     );
 
-    // Open Gmail compose with all details pre-filled in To, Subject & Body
-    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com&su=${subject}&body=${body}`;
-    window.open(gmailURL, '_blank');
+    // Responsive behavior: Gmail URL for desktop, mailto for mobile
+    if (window.innerWidth < 768) {
+        window.location.href = `mailto:maridhu4@gmail.com?subject=${subject}&body=${body}`;
+    } else {
+        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=maridhu4@gmail.com&su=${subject}&body=${body}`;
+        window.open(gmailURL, '_blank');
+    }
 
     const btn = e.target.querySelector('button[type="submit"]');
     const origHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="bx bx-check"></i> Opening Mail...';
+    btn.innerHTML = '<i class="bx bx-check"></i> Redirecting...';
     btn.style.background = 'linear-gradient(135deg,#34d399,#22d3ee)';
-    showToast('✅ Gmail opened with your message! Click Send in Gmail.', 'success');
+    
+    const toastMsg = window.innerWidth < 768 ? '✅ Opening your mail app!' : '✅ Gmail opened with your message!';
+    showToast(toastMsg, 'success');
     e.target.reset();
 
     setTimeout(() => {
