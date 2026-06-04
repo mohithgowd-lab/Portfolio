@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const typed = new Typed('.typed-text', {
     strings: [
         'Passionate Web Developer',
+        'YouTube Influencer',
         'UI / UX Designer',
         'Creative Thinker',
         'Lifelong Learner'
@@ -172,9 +173,9 @@ document.addEventListener('mousemove', e => {
     const WORDS = [
         'Mohith', 'MGM', 'Web Dev', 'UI Design', 'UX',
         'HTML5', 'CSS3', 'JavaScript', 'Responsive',
-        'Video Editing', 'Photo Edit', 'Poster Design',
-        'Thumbnail', 'Creative', 'Frontend', '9.31 CGPA',
-        '</code>', '<dev/>', '{ innovation }'
+        'YouTube', 'Influencer', 'Video Editing', 'Photo Edit', 
+        'Poster Design', 'Thumbnail', 'Creative', 'Frontend', 
+        '9.31 CGPA', '</code>', '<dev/>', '{ innovation }'
     ];
     const COLORS   = ['#ff8c42', '#9b6ff7', '#4f9cf9', '#22d4ee'];
     const DOT_COUNT = 60;

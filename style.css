@@ -570,23 +570,53 @@ select:focus-visible {
     background: rgba(15,15,26,0.8);
     border: 1px solid var(--border);
     font-size: 1.3rem;
-    color: var(--text-muted);
     transition: var(--transition);
     backdrop-filter: blur(8px);
 }
-.social-link:hover {
-    color: var(--orange);
-    background: var(--orange-dim);
-    border-color: var(--orange);
-    box-shadow: 0 0 18px rgba(255,140,66,0.35);
+
+/* Individual brand colors for floating social sidebar */
+.social-link[title="LinkedIn"] { color: #0a66c2; border-color: rgba(10, 102, 194, 0.3); }
+.social-link[title="LinkedIn"]:hover {
+    color: #0a66c2;
+    background: rgba(10, 102, 194, 0.12);
+    border-color: #0a66c2;
+    box-shadow: 0 0 18px rgba(10, 102, 194, 0.45);
+    transform: translateY(-4px);
+}
+
+.social-link[title="YouTube"] { color: #ff0000; border-color: rgba(255, 0, 0, 0.3); }
+.social-link[title="YouTube"]:hover {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.12);
+    border-color: #ff0000;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.45);
+    transform: translateY(-4px);
+}
+
+.social-link[title="GitHub"] { color: #ffffff; border-color: rgba(255, 255, 255, 0.2); }
+.social-link[title="GitHub"]:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px);
+}
+
+.social-link[title="Gmail"] { color: #ea4335; border-color: rgba(234, 67, 53, 0.3); }
+.social-link[title="Gmail"]:hover {
+    color: #ea4335;
+    background: rgba(234, 67, 53, 0.12);
+    border-color: #ea4335;
+    box-shadow: 0 0 18px rgba(234, 67, 53, 0.45);
     transform: translateY(-4px);
 }
 .social-line { width: 1.5px; height: 60px; background: linear-gradient(to bottom, var(--border), transparent); margin-top: 0.25rem; }
 
 /* Staggered float animation for sidebar icons */
 .soc-1 { animation: floatSoc 3.2s ease-in-out infinite; }
-.soc-2 { animation: floatSoc 3.2s ease-in-out infinite 0.5s; }
-.soc-3 { animation: floatSoc 3.2s ease-in-out infinite 1s; }
+.soc-2 { animation: floatSoc 3.2s ease-in-out infinite 0.4s; }
+.soc-3 { animation: floatSoc 3.2s ease-in-out infinite 0.8s; }
+.soc-4 { animation: floatSoc 3.2s ease-in-out infinite 1.2s; }
 @keyframes floatSoc {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-8px); }
@@ -685,19 +715,37 @@ select:focus-visible {
     border-radius: var(--radius);
     transition: var(--transition);
 }
-.about-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--orange);
-    box-shadow: 0 0 0 1.5px var(--orange), 0 8px 28px rgba(255,140,66,0.15);
-    background: rgba(255,140,66,0.04);
-    backdrop-filter: blur(10px);
-}
 .about-card i { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
 .about-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
 .about-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+/* Individual About Card Colors & Glows */
 .ac-blue i { color: var(--blue); }
+.about-card.ac-blue:hover {
+    transform: translateY(-6px);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 1.5px var(--blue), 0 8px 28px rgba(79, 156, 249, 0.15);
+    background: rgba(79, 156, 249, 0.04);
+    backdrop-filter: blur(10px);
+}
+
 .ac-purple i { color: var(--purple); }
-.ac-cyan i { color: var(--cyan); }
+.about-card.ac-purple:hover {
+    transform: translateY(-6px);
+    border-color: var(--purple);
+    box-shadow: 0 0 0 1.5px var(--purple), 0 8px 28px rgba(155, 111, 247, 0.15);
+    background: rgba(155, 111, 247, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.ac-youtube i { color: #ff0000; }
+.about-card.ac-youtube:hover {
+    transform: translateY(-6px);
+    border-color: #ff0000;
+    box-shadow: 0 0 0 1.5px #ff0000, 0 8px 28px rgba(255, 0, 0, 0.15);
+    background: rgba(255, 0, 0, 0.04);
+    backdrop-filter: blur(10px);
+}
 
 /* ============================================================
    SKILLS — BENTO GRID
@@ -911,8 +959,15 @@ select:focus-visible {
     color: var(--text-muted);
     transition: var(--transition);
 }
-.contact-detail i { font-size: 1.3rem; color: var(--blue); }
+.contact-detail i { font-size: 1.3rem; transition: var(--transition); }
 .contact-detail:hover { color: var(--text); }
+
+/* Colorized Contact Icons */
+.contact-detail i.bxl-linkedin { color: #0a66c2; }
+.contact-detail i.bxl-youtube { color: #ff0000; }
+.contact-detail i.bxl-github { color: #ffffff; }
+.contact-detail i.bxl-gmail { color: #ea4335; }
+.contact-detail i.bx-map-pin { color: var(--blue); }
 
 /* Form */
 .contact-form-wrap {
@@ -923,23 +978,28 @@ select:focus-visible {
 }
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-.form-group label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.03em; }
+.form-group label { font-size: 0.85rem; font-weight: 600; color: var(--text); letter-spacing: 0.03em; }
 .form-group input,
 .form-group textarea {
     padding: 0.9rem 1.2rem;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
+    background: #ffffff;
+    border: 1px solid #d1d5db;
     border-radius: var(--radius-sm);
-    color: var(--text);
+    color: #000000;
     font-size: 0.95rem;
     font-family: inherit;
     transition: var(--transition);
     resize: none;
 }
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--text-dim); }
+.form-group textarea::placeholder { color: #6b7280; }
 .form-group input:focus,
-.form-group textarea:focus { outline: none; border-color: var(--blue); background: rgba(79,156,249,0.05); }
+.form-group textarea:focus { 
+    outline: none; 
+    border-color: var(--blue); 
+    background: #ffffff; 
+    box-shadow: 0 0 12px rgba(79, 156, 249, 0.25);
+}
 
 .full-width { width: 100%; justify-content: center; border-radius: var(--radius-sm); }
 
